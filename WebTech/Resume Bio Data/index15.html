@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyPortfolio Webpage</title>
+    <link rel="stylesheet" href="/fontawesome-free-6.4.2-web/css/all.css">
+     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"> -->
+   <style>
+    *
+    {
+        margin: 0px;
+    padding: 0px;
+    font-family: 'poppins',sans-serif;
+    box-sizing: border-box;
+
+    }
+    html{
+        scroll-behavior: smooth;
+    }
+    body
+    {
+        background-color: #080808;
+        color: #fff;
+    }
+    #header
+{
+    width: 100%;
+    height: 100vh;
+    background-image:url(/images/Untitled_design-removebg-preview\ \(1\).png);
+    background-size: cover;
+    background-position: center;
+ } 
+ .container 
+{
+    padding:  10px 10px;
+}
+nav
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap:wrap ;
+}
+.logo
+{
+    width: 140px;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a
+{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+nav ul li a:hover::after
+{
+    width: 100%;
+      box-shadow: 0 0 10px rgb(92, 44, 44);
+}
+.header-text
+{
+    margin-top: 20%;
+    font-size: 30px;
+
+}
+.header-text h1 
+{
+    font-size: 60px;
+    margin-top: 20px;
+}
+.header-text h1  span
+{
+    color: red;
+}
+.header-text p{
+    color: #b54769;
+    font-size: 50px;
+}
+
+/* about */
+#about
+{
+    padding: 60px 0px;
+    color: #abab;;
+}
+.row
+{
+   
+     display: flex;
+     
+     flex-wrap: wrap;
+ 
+}
+
+.about-col-1
+{flex-basis: 40%;
+    
+}
+.about-col-1 img 
+{
+    width: 100%;
+    border-radius: 15px;
+}
+.about-col-2  
+{
+    flex-basis: 55%;
+}
+.sub-title
+{
+    font-size: 60px;
+    font-weight: 100;
+    color: #fff;
+} 
+.tab-title
+{
+    display: flex;
+    margin: 20px 0 40px;
+}   
+.tab-links
+{
+    margin-right: 50px; 
+    font-size: 18px;
+    font-weight: 500; 
+    cursor: pointer;
+    position: relative;
+
+   }
+   
+   .tab-links::after
+   {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff04ff;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+   }
+   .tab-links.active-link::after
+   {
+    width: 50%;
+   }
+   .tab-contents ul li 
+   {
+    list-style: none;
+    margin: 10px 0;
+   }
+
+   .tab-contents ul li span
+   { 
+    color: #b54769;
+    font-size: 14px;
+   }
+   .tab-contents
+   {
+    display: none;
+   }
+   .tab-contents.active-tab
+   {
+    display: block;
+   }
+   /* ***************************** */
+   #Services
+   {
+    padding: 30px 0;
+
+   }
+   .services-list
+   {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+   }
+   
+   .services-list div
+   {
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background o.5s,transform 0.5s;
+   }
+   .services-list div i{
+    font-size: 50px;
+    margin-bottom: 30px
+   }
+   .services-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom:  15px ;
+
+   }
+   .services-list div a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+   }
+   .services-list div:hover
+   {
+    background: #ff04ff;
+    transform: translateY(-10px)
+   }
+
+   /* ******Myportpolio***** */
+   #portpolio
+   {
+    padding: 50px 0;
+
+   }
+   .work-list
+   {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+   }
+   .work{
+    border-radius: 10px;
+    position: relative;
+    overflow:hidden ;
+   }
+   .work img {
+    width: 90%;
+    border-radius: 10px;
+    display: block;
+   
+     transition: transform 0.5s;
+   }
+   .layer
+   {
+    width: 90%;
+    height:0%;
+     background: linear-gradient(rgba(0,0,0,0.6),#ff004f); 
+    border-radius: 10px;
+     position: absolute; 
+     left: 0px; 
+     bottom: 0px; 
+     overflow:auto; 
+      display: flex;  
+     align-items: center; 
+     justify-content: center; 
+     flex-direction: column; 
+     padding: 0 40px; 
+     text-align: center; 
+     font-size: 14px; 
+     transition: height 0.5s;
+   }
+   .layer h3
+    {
+    font-weight: 500;
+    margin-bottom: 20px;
+   }
+   .layer a{
+    margin-top: 20px;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+
+   }
+   .work:hover img {
+    transform: scale(1.0);
+   }
+   .work:hover .layer{
+    height: 100%;
+   }
+   .btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition:  background 0.5s ;
+   }
+   .btn:hover
+   {
+    background: #ff004f;
+   }
+   .contect-left{
+    flex-basis: 35%;
+   }
+   .contect-right{
+    flex-basis: 60%;
+   }
+   .contect-left p{
+     margin-top: 30px;
+   }
+   .contect-left p i{
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 25px;
+   }
+   .social-icon{
+    margin-top: 30px;
+    font-size: 30px;
+    margin-right:15px; 
+    color: #e0e0f2;
+    display: inline-block;
+   }
+   .social-icon a:hover
+   {
+    color: #ea366f;
+    transform: translateY(-5px);
+   }
+   .btn .btn2
+   {
+    display: inline-block;
+    background: #ff004f;
+   }
+   .contect-right form{
+    width: 100%;   
+   }
+   form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    margin: 15px;
+    font-size: 18px;
+    border-radius: 6px;
+   }
+   form .btn2
+   {
+    
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+   } 
+   .copyright
+   {
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+   
+    font-weight: 300;
+    margin-top: 20px;
+
+   }
+   .copyright i{
+    color: #ee0c53;
+   }
+
+   /* ----------Css for Small Screen----------- */
+
+   nav .fas{
+    display: none;
+   }
+@media only screen and (max-width:600px){
+    #header{
+        background-image: url(/images/Avi2-removebg-preview.png);
+    }
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+    .header-text h1{
+        font-size: 30px;
+    }
+    nav .fas{
+    display: block;
+    font-size: 25px;
+   }
+   nav ul{
+    background: #ff004f;
+    position: fixed;
+    top: 0;
+    right: -200px;
+    width: 200px;
+    height: 100vh;
+    padding-top: 50px;
+     z-index:2 ; 
+     transition: right 0.5s;
+   }
+     nav ul li {
+    display: block;
+    margin: 25px;
+   } 
+   nav ul .fas{
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    cursor: pointer;
+   } 
+   .sub-title
+   {
+    font-size: 40px;
+   }
+   .about-col-1,.about-col-2{
+    flex-basis: 100%;
+   }
+   .about-col-2{
+    font-size: 14px;
+   }
+   .tab-links{
+    font-size: 16px;
+    margin-left: 20px;
+   }
+   .contect-left,.contect-right{
+    flex-basis: 100%;
+   }
+   .copyright{
+    font-size: 14px;
+   }
+} 
+
+
+
+
+   </style>
+</head>
+<body>
+  <div id="header">
+    <div class="container">
+        <nav>
+            <img src="../images/Flipkart.jpg" alt="" class="logo">
+            <ul id="sidemenu">
+                
+                    <li class="tab-links active-link" onclick="opentab ('Home')" ><a href="#header" >Home </a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#Services">Services</a></li>
+                    <li><a href="#portpolio">MyPortfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+               
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()" ></i>
+        </nav>
+    
+    <div class="header-text">
+        <p>Associate Software Engineer</p>
+        <h1>Hi,  I'm <span>Seemran Swain</span> <br> <span>From Odisha</span> </h1>
+
+     </div>
+    </div>
+    </div>
+    
+   
+ <!-- about -->
+ <div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="/images/Avi1-removebg-preview.png" alt="">
+
+
+            </div>
+            <div class="about-col-2">
+                <h1>About Me </h1>
+                <p>I am energatic and self-motivated tech enthusiast. Keen to learn new technologies.</p>
+
+ 
+               <div class="tab-title">
+                <p class="tab-links active-link" onclick="opentab ('Skills')">Skills</p>
+                <p class="tab-links" onclick="opentab ('Experience')">Experience</p>
+                <p class="tab-links" onclick="opentab ('Eduction')">Eduction </p>
+
+               </div>
+               
+               <div class="tab-contents active-tab " id="Skills">
+                <ul>
+                    <li><span>Java</span><br>Design Interfaces Using Java</li>
+                    <li><span>Web Developer</span><br>Create Different Websites</li>
+                    <li><span>Software Developer</span><br>Building Web and Android App</li>
+                </ul>
+               </div>
+               <div class="tab-contents "id="Experience">
+                <ul>
+                    <li><span>Oops</span><br>using to create project</li>
+                    <li><span>HTML CSS JS</span><br>Create differnt website using webtech</li>
+                    <li><span>Agile Model</span><br>works with different model of SDLC</li>
+                </ul>
+               </div>
+               <div class="tab-contents "id="Eduction">
+                <ul>
+                    <!-- <li><span>2023</span><br>Full Stack Java Training From Jspiders Marathahalli Bangalore.</li> -->
+                    <li><span>2023</span><br>B.Tech Passout in Silicon Institute Of Technology Sambalpur</li>
+                    <li><span>2019</span><br>Intermediate Completed in Aims Higher Secondery School Sambalpur</li>
+                    <li><span>2017</span><br>Schooling Completed from Govt. Girls. High School Bargarh</li>
+                </ul>
+               </div>
+            </div>
+        </div>
+    </div>
+ </div>
+ <!-- ------ Services------ -->
+   <div id="Services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa fa-code"></i>
+                <h2>Web Design</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim assumenda quos sapiente mollitia, consectetur quam eum illum consequatur molestiae aliquid iure earum minus adipisci dicta doloremque officia! Id, nostrum quasi.</p>
+                <a href="">Learn More</a>
+            </div>
+
+            <div>
+                <i class="fa-brands fa-app-store"></i>
+                <h2>Website Devloper</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim assumenda quos sapiente mollitia, consectetur quam eum illum consequatur molestiae aliquid iure earum minus adipisci dicta doloremque officia! Id, nostrum quasi.</p>
+                <a href="">Learn More</a>
+            </div>
+
+            <div>
+                <i class="fa fa-app-store"></i>
+                <h2>App Devloper</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim assumenda quos sapiente mollitia, consectetur quam eum illum consequatur molestiae aliquid iure earum minus adipisci dicta doloremque officia! Id, nostrum quasi.</p>
+                <a href="">Learn More</a>
+            </div>
+
+        </div>
+
+    </div>
+<!-- -------PORTPOLIO -->
+   </div>
+   <div id="portpolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        
+        <div class="work-list">
+            <div class="work">
+            <img src="/images/work-1.png" alt="">
+            <div class="layer">
+                <h3>Social Media App</h3>
+                <p>The app connects you yo the telented people around the world.
+                    Download int from play store.
+                </p>
+                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></i></a>
+            </div>
+           </div>
+              
+             <div class="work">
+            <img src="/images/work-2.png" alt="">
+            <div class="layer">
+                <h3>Music App</h3>
+                <p>The app connects you yo the telented people around the world.
+                    Download int from play store.</p>
+                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+            </div>
+
+            <div class="work">
+                <img src="/images/work-3.png" alt="">
+                  <div class="layer">
+                    <h3>Online Shopping App</h3>
+                    <p>The app connects you yo the telented people around the world.
+                        Download int from play store.
+                    </p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                  </div>
+                </div>
+             </div>
+           </div>
+           <a href="#" class="btn">See More</a>
+       </div>
+    </div>
+    <!-- ------contact------- -->
+     <div id="contect">
+        <div class="container">
+            <div class="row">
+
+                <div class="contect-left">
+                    <h1 class="sub-title">Contect Me</h1>
+                    <p><i class="fa-solid fa-envelope"></i> sirtsavinash@gmail.com</p>
+                    <p><i class="fa-solid fa-address-book"></i>08519036492</p>
+                    <p><i class="fa-solid fa-address-book"></i>09111322158</p>
+                    <div class="social-icon">
+                        <a href="https://facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://twitter.com/"><i class="fa-brands fa-twitter-square"></i></a>
+                        <a href="https://linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="/images/Avi2.jpg" download class="btn btn2">Download CV</a>
+                </div>
+
+                <div class="contect-Right">
+                    <form name="submit-to-google-sheet"> 
+                        <input type="text"name="Name" placeholder="Your Name" required>
+                        <input type="email"name="email" placeholder="Your Email" required>
+                        <textarea name="Massage" placeholder="Your Massage"></textarea>
+                        <button type="submit" class="btn btn2">submit</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright@ Avinash. Made with <i class="fa fa-heart"></i> by Java Devloper</p>
+        </div>
+     </div>
+
+
+
+
+
+
+
+<!--  ****************************************************************  -->
+    <Script>
+        var tablinks= document.getElementsByClassName("tab-links")
+        var tabcontents= document.getElementsByClassName("tab-contents")
+        function opentab (tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </Script>
+    <!-- ----------------------------------------------------------------- -->
+    <script>
+        var sidemenu=document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right="0";
+        }
+           
+        function closemenu(){
+            sidemenu.style.right="-200px";
+        }
+
+    </script>
+
+
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxcyB1bCG-O80EcZ7wtbfxEP9NjgFHdKWxzi5K6t_SyeYp7FQVimSqVBjvcFmfsCVTS/exec'
+    const form = document.forms['submit-to-google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+</body>
+</html>
+
+
+
+
+
+
+<!-- <https://script.google.com/macros/s/AKfycbxcyB1bCG-O80EcZ7wtbfxEP9NjgFHdKWxzi5K6t_SyeYp7FQVimSqVBjvcFmfsCVTS/exec> -->

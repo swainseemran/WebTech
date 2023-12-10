@@ -1,0 +1,71 @@
+body {
+    background: url(../images/images.jpeg);
+    font-family: Georgia, serif;
+    background-size: cover;
+}
+
+h1 {
+    font-family: Georgia, serif;
+    text-align: center;
+    color: rgb(129, 219, 56);
+    text-shadow: 0 0 10px rgb(169, 245, 207);
+    /* background: linear-gradient(45deg,red,blue,pink,green); */
+}
+
+fieldset {
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 2px solid black;
+    color: aliceblue;
+    border-radius: 0 15px 0 15px;
+
+}
+
+fieldset>legend {
+    font-family: Georgia, serif;
+    background-color: rgb(121 241 98);
+    color: rgb(5 23 51);
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 0 10px 0 10px;
+}
+
+table {
+    width: 100%;
+}
+
+input[type="text"] {
+    height: 25px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+
+}
+
+input[type="text"]:focus {
+    background-color: brown;
+}
+
+#submitbtn {
+    margin-left: 500px;
+    width: 100px;
+    height: 35px;
+    border-radius: 0 10px 0 10px;
+    background-color: rgb(121 241 98);
+    color: rgb(5 23 51);
+    font-size: 15px;
+    /* background: linear-gradient(45deg, rgb(232, 69, 69), rgb(133, 133, 242), pink, rgb(84, 242, 84)); */
+
+}
+
+#resetbtn {
+    width: 100px;
+    height: 35px;
+    border-radius: 0 10px 0 10px;
+    background-color: rgb(121 241 98);
+    color: rgb(5 23 51);
+    font-size: 15px;
+    /* background: linear-gradient(45deg, rgb(232, 69, 69), rgb(133, 133, 242), pink, rgb(84, 242, 84)); */
+
+}
+
+

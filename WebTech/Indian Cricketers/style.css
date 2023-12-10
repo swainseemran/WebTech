@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background: linear-gradient(45deg,rgb(94,184,207),rgb(0,67,110),rgb(216,125,107));
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header>h1{
+    color: white;
+}
+header>#links-section{
+
+}
+header>#links-section>a{
+    color: white;
+    text-decoration: none;
+}
+header>#links-section>a:hover{
+    text-decoration: underline;
+}
+#landing-page{
+    background-color: blue url("../images/Cricket.jpeg") no-repeat 0px 0px scroll;
+    background-size: cover;
+    height: 100vh;
+}
+#landing-page>#content-section{
+    background-color: rgba(19, 105, 107,0.3);
+    height: inherit;
+    display: flex;
+    /* color: white; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

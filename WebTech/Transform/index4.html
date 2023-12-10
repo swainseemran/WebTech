@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transform</title>
+    <style>
+        div{
+            box-shadow: 0 0 10px black;
+            width: 350px;
+            height: 200px;
+            margin: 10px;
+            position:relative;
+            overflow: hidden;
+            display: inline-block;
+        }
+        div>img{
+            width: inherit;
+            height: inherit;
+            transition: all 1s linear 0.1s;
+        }
+        div:hover>img{
+            transform: translateX(100%);
+        }
+        div:hover{
+            cursor: pointer;
+        }
+        div>.content-section{
+            background-color: rgba(99, 82, 251, 0.895);
+            text-align: center;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            margin: 0px;
+            transform: translateY(100%);
+            transition: all 1s linear 0s;
+        }
+        div:hover>.content-section{
+            transform: translateY(0%);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="../images/Flipkart.jpg" alt="">
+
+        <div class="content-section">
+            <h2>Flipkart</h2>
+            <p>Flipkart Private Limited is an Indian e-commerce company,
+                headquartered in Bangalore, and incorporated 
+                in Singapore as a private limited company.</p>
+            <button>Shop Now</button>
+        </div>
+    </div>
+    <div>
+        <img src="../images/Flipkart.jpg" alt="">
+
+        <div class="content-section">
+            <h2>Flipkart</h2>
+            <p>We’ve launched new features to make life 
+                easier for everyday Indians. 
+                From building new ways to shop with Vibes
+                So, come for the love we show you, 
+                and stay for the experience!</p>
+            <button>Shop Now</button>
+        </div>
+    </div>
+    <!-- <div>
+        <img src="../images/Flipkart.jpg" alt="">
+
+        <div class="content-section">
+            <h2>Flipkart</h2>
+            <p>Flipkart Private Limited is an Indian e-commerce company,
+                headquartered in Bangalore, and incorporated 
+                in Singapore as a private limited company.</p>
+            <button>Shop Now</button>
+        </div>
+    </div>
+    <div>
+        <img src="../images/Flipkart.jpg" alt="">
+
+        <div class="content-section">
+            <h2>Flipkart</h2>
+            <p>We’ve launched new features to make life 
+                easier for everyday Indians. 
+                From building new ways to shop with Vibes
+                So, come for the love we show you, 
+                and stay for the experience!</p>
+            <button>Shop Now</button>
+        </div>
+    </div>
+    <div>
+        <img src="../images/Flipkart.jpg" alt="">
+
+        <div class="content-section">
+            <h2>Flipkart</h2>
+            <p>Flipkart Private Limited is an Indian e-commerce company,
+                headquartered in Bangalore, and incorporated 
+                in Singapore as a private limited company.</p>
+            <button>Shop Now</button>
+        </div>
+    </div>
+    <div>
+        <img src="../images/Flipkart.jpg" alt="">
+
+        <div class="content-section">
+            <h2>Flipkart</h2>
+            <p>We’ve launched new features to make life 
+                easier for everyday Indians. 
+                From building new ways to shop with Vibes
+                So, come for the love we show you, 
+                and stay for the experience!</p>
+            <button>Shop Now</button>
+        </div>
+    </div>
+    <div>
+        <img src="../images/Flipkart.jpg" alt="">
+
+        <div class="content-section">
+            <h2>Flipkart</h2>
+            <p>Flipkart Private Limited is an Indian e-commerce company,
+                headquartered in Bangalore, and incorporated 
+                in Singapore as a private limited company.</p>
+            <button>Shop Now</button>
+        </div>
+    </div>
+    <div>
+        <img src="../images/Flipkart.jpg" alt="">
+
+        <div class="content-section">
+            <h2>Flipkart</h2>
+            <p>We’ve launched new features to make life 
+                easier for everyday Indians. 
+                From building new ways to shop with Vibes
+                So, come for the love we show you, 
+                and stay for the experience!</p>
+            <button>Shop Now</button>
+        </div>
+    </div>
+    <div>
+        <img src="../images/Flipkart.jpg" alt="">
+
+        <div class="content-section">
+            <h2>Flipkart</h2>
+            <p>Flipkart Private Limited is an Indian e-commerce company,
+                headquartered in Bangalore, and incorporated 
+                in Singapore as a private limited company.</p>
+            <button>Shop Now</button>
+        </div>
+    </div>
+    <div>
+        <img src="../images/Flipkart.jpg" alt="">
+
+        <div class="content-section">
+            <h2>Flipkart</h2>
+            <p>We’ve launched new features to make life 
+                easier for everyday Indians. 
+                From building new ways to shop with Vibes
+                So, come for the love we show you, 
+                and stay for the experience!</p>
+            <button>Shop Now</button>
+        </div>
+    </div>
+    <div>
+        <img src="../images/Flipkart.jpg" alt="">
+
+        <div class="content-section">
+            <h2>Flipkart</h2>
+            <p>Flipkart Private Limited is an Indian e-commerce company,
+                headquartered in Bangalore, and incorporated 
+                in Singapore as a private limited company.</p>
+            <button>Shop Now</button>
+        </div>
+    </div>
+    <div>
+        <img src="../images/Flipkart.jpg" alt="">
+
+        <div class="content-section">
+            <h2>Flipkart</h2>
+            <p>We’ve launched new features to make life 
+                easier for everyday Indians. 
+                From building new ways to shop with Vibes
+                So, come for the love we show you, 
+                and stay for the experience!</p>
+            <button>Shop Now</button>
+        </div>
+    </div> -->
+</body>
+</html>
